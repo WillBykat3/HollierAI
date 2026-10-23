@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#212121" media="(prefers-color-scheme: dark)">
+  <title>ChatGPT</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- SVG sprite: every icon used on the page -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-logo" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1685a.0757.0757 0 0 1-.071 0l-4.8303-2.7865A4.504 4.504 0 0 1 2.3408 7.872zm16.5963 3.8558L13.1038 8.364 15.1192 7.2a.0757.0757 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6765 8.1042v-5.6772a.79.79 0 0 0-.407-.667zm2.0107-3.0231l-.142-.0852-4.7735-2.7818a.7759.7759 0 0 0-.7854 0L9.409 9.2297V6.8974a.0662.0662 0 0 1 .0284-.0615l4.8303-2.7866a4.4992 4.4992 0 0 1 6.6802 4.66zM8.3065 12.863l-2.02-1.1638a.0804.0804 0 0 1-.038-.0567V6.0742a4.4992 4.4992 0 0 1 7.3757-3.4537l-.142.0805L8.704 5.459a.7948.7948 0 0 0-.3927.6813zm1.0976-2.3654l2.602-1.4998 2.6069 1.4998v2.9994l-2.5974 1.4997-2.6067-1.4997Z"/>
+      </symbol>
+      <symbol id="i-sidebar" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2.75" y="3.75" width="14.5" height="12.5" rx="3"/><path d="M7.75 3.75v12.5"/>
+      </symbol>
+      <symbol id="i-new" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9 3.75H6.5A2.75 2.75 0 0 0 3.75 6.5v7a2.75 2.75 0 0 0 2.75 2.75h7a2.75 2.75 0 0 0 2.75-2.75V11"/>
+        <path d="M14.35 3.4a1.6 1.6 0 0 1 2.25 2.25L10.7 11.55 8 12.25l.7-2.7z"/>
+      </symbol>
+      <symbol id="i-search" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+        <circle cx="8.75" cy="8.75" r="5.25"/><path d="m12.75 12.75 3.75 3.75"/>
+      </symbol>
+      <symbol id="i-library" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="3.75" width="14" height="12.5" rx="2.75"/><circle cx="7.5" cy="8" r="1.25"/><path d="m3.5 14 4-3.5 3 2.5 2.5-2 3.5 3"/>
+      </symbol>
+      <symbol id="i-gpts" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
+        <circle cx="6.25" cy="6.25" r="2.5"/><circle cx="13.75" cy="6.25" r="2.5"/><circle cx="6.25" cy="13.75" r="2.5"/><circle cx="13.75" cy="13.75" r="2.5"/>
+      </symbol>
+      <symbol id="i-folder" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 6.5A2.25 2.25 0 0 1 5.25 4.25h2.6l1.65 1.75h5.25A2.25 2.25 0 0 1 17 8.25v5.5A2.25 2.25 0 0 1 14.75 16H5.25A2.25 2.25 0 0 1 3 13.75z"/><path d="M10 8.75v4.5M7.75 11h4.5"/>
+      </symbol>
+      <symbol id="i-plus" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+        <path d="M10 4.25v11.5M4.25 10h11.5"/>
+      </symbol>
+      <symbol id="i-mic" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="7.25" y="2.75" width="5.5" height="9" rx="2.75"/><path d="M4.75 9.5a5.25 5.25 0 0 0 10.5 0M10 14.75v2.5"/>
+      </symbol>
+      <symbol id="i-voice" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+        <path d="M5 8.25v3.5M8.33 5.5v9M11.67 7.25v5.5M15 9v2"/>
+      </symbol>
+      <symbol id="i-send" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 15.5v-11M5.25 9.25 10 4.5l4.75 4.75"/>
+      </symbol>
+      <symbol id="i-stop" viewBox="0 0 20 20"><rect x="6.25" y="6.25" width="7.5" height="7.5" rx="1.25" fill="currentColor"/></symbol>
+      <symbol id="i-chev" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m4.5 6.25 3.5 3.5 3.5-3.5"/>
+      </symbol>
+      <symbol id="i-chev-r" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m6.25 4.5 3.5 3.5-3.5 3.5"/>
+      </symbol>
+      <symbol id="i-temp" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2.6 2.4">
+        <path d="M10 3.25a6.75 6.75 0 0 0-5.9 10.05L3.25 16.75l3.45-.85A6.75 6.75 0 1 0 10 3.25z"/>
+      </symbol>
+      <symbol id="i-sparkle" viewBox="0 0 16 16" fill="currentColor">
+        <path d="M8 1.5c.3 2.9 1.6 4.2 4.5 4.5-2.9.3-4.2 1.6-4.5 4.5-.3-2.9-1.6-4.2-4.5-4.5C6.4 5.7 7.7 4.4 8 1.5zM12.5 9.5c.15 1.5.85 2.2 2.35 2.35-1.5.15-2.2.85-2.35 2.35-.15-1.5-.85-2.2-2.35-2.35 1.5-.15 2.2-.85 2.35-2.35z"/>
+      </symbol>
+      <symbol id="i-copy" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round">
+        <rect x="7" y="7" width="9.5" height="9.5" rx="2"/><path d="M13 7V5.5a2 2 0 0 0-2-2H5.5a2 2 0 0 0-2 2V11a2 2 0 0 0 2 2H7"/>
+      </symbol>
+      <symbol id="i-check" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m4.5 10.5 3.5 3.5 7.5-8"/>
+      </symbol>
+      <symbol id="i-up" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round">
+        <path d="M6.5 9v7.5H4.25a1 1 0 0 1-1-1V10a1 1 0 0 1 1-1zM6.5 9l3.1-5.6a1.6 1.6 0 0 1 2.95 1.1L11.9 8h3.6a1.75 1.75 0 0 1 1.7 2.1l-1.05 5a1.75 1.75 0 0 1-1.7 1.4H6.5"/>
+      </symbol>
+      <symbol id="i-down" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round">
+        <g transform="rotate(180 10 10)"><path d="M6.5 9v7.5H4.25a1 1 0 0 1-1-1V10a1 1 0 0 1 1-1zM6.5 9l3.1-5.6a1.6 1.6 0 0 1 2.95 1.1L11.9 8h3.6a1.75 1.75 0 0 1 1.7 2.1l-1.05 5a1.75 1.75 0 0 1-1.7 1.4H6.5"/></g>
+      </symbol>
+      <symbol id="i-share" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 12.5V3.5M6.5 7 10 3.5 13.5 7M4.5 11v3.25a2.25 2.25 0 0 0 2.25 2.25h6.5a2.25 2.25 0 0 0 2.25-2.25V11"/>
+      </symbol>
+      <symbol id="i-retry" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M15.75 9.5A5.75 5.75 0 1 1 14 5.4M15.25 3v3.25H12"/>
+      </symbol>
+      <symbol id="i-more" viewBox="0 0 20 20" fill="currentColor">
+        <circle cx="4.5" cy="10" r="1.4"/><circle cx="10" cy="10" r="1.4"/><circle cx="15.5" cy="10" r="1.4"/>
+      </symbol>
+      <symbol id="i-menu" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+        <path d="M3.5 7h13M3.5 13h8.5"/>
+      </symbol>
+      <symbol id="i-speaker" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3.75 8v4h2.75l4 3.25V4.75L6.5 8zM13.5 7.25a4 4 0 0 1 0 5.5M15.5 5.25a7 7 0 0 1 0 9.5"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <div class="app" id="app">
+    <!-- ───────────── Sidebar ───────────── -->
+    <aside class="sidebar" id="sidebar" aria-label="Chat history">
+      <div class="sb-top">
+        <button class="icon-btn sb-logo" id="logo-btn" aria-label="ChatGPT">
+          <svg class="logo"><use href="#i-logo"/></svg>
+          <svg class="logo-alt"><use href="#i-sidebar"/></svg>
+        </button>
+        <button class="icon-btn sb-toggle" id="sb-close" aria-label="Close sidebar"><svg><use href="#i-sidebar"/></svg></button>
+      </div>
+
+      <nav class="sb-nav">
+        <button class="sb-item" id="new-chat-side"><svg><use href="#i-new"/></svg><span>New chat</span><kbd>Ctrl Shift O</kbd></button>
+        <button class="sb-item" data-noop><svg><use href="#i-search"/></svg><span>Search chats</span><kbd>Ctrl K</kbd></button>
+        <button class="sb-item" data-noop><svg><use href="#i-library"/></svg><span>Library</span></button>
+      </nav>
+
+      <div class="sb-scroll">
+        <nav class="sb-nav">
+          <button class="sb-item" data-noop><svg><use href="#i-gpts"/></svg><span>GPTs</span></button>
+          <button class="sb-item" data-noop><svg><use href="#i-folder"/></svg><span>New project</span></button>
+        </nav>
+
+        <section class="sb-chats" id="chats-section" hidden>
+          <h2>Chats</h2>
+          <ol id="chat-list"></ol>
+        </section>
+      </div>
+
+      <div class="sb-bottom">
+        <button class="profile" data-noop>
+          <span class="avatar" id="avatar"></span>
+          <span class="profile-text">
+            <span class="profile-name" id="profile-name"></span>
+            <span class="profile-plan">Free</span>
+          </span>
+          <span class="upgrade-pill">Upgrade</span>
+        </button>
+      </div>
+    </aside>
+    <div class="scrim" id="scrim"></div>
+
+    <!-- ───────────── Main ───────────── -->
+    <main class="main is-empty" id="main">
+      <header class="topbar">
+        <button class="icon-btn mobile-only" id="sb-open-mobile" aria-label="Open sidebar"><svg><use href="#i-menu"/></svg></button>
+        <div class="model-wrap">
+          <button class="model-btn" id="model-btn" aria-haspopup="menu" aria-expanded="false">ChatGPT <svg><use href="#i-chev"/></svg></button>
+          <div class="menu" id="model-menu" role="menu" hidden>
+            <button class="menu-item" role="menuitem" data-noop>
+              <span class="menu-ic"><svg><use href="#i-sparkle"/></svg></span>
+              <span class="menu-text"><span class="menu-title">ChatGPT Plus</span><span class="menu-sub">Our smartest model &amp; more</span></span>
+              <span class="menu-upgrade">Upgrade</span>
+            </button>
+            <button class="menu-item" role="menuitem" data-close-menu>
+              <span class="menu-ic"><svg><use href="#i-logo"/></svg></span>
+              <span class="menu-text"><span class="menu-title">ChatGPT</span><span class="menu-sub">Great for everyday tasks</span></span>
+              <svg class="menu-check"><use href="#i-check"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="topbar-center desktop-only">
+          <button class="get-plus" data-noop><svg><use href="#i-sparkle"/></svg>Get Plus</button>
+        </div>
+        <div class="topbar-right">
+          <button class="icon-btn desktop-only" id="share-btn" aria-label="Share" hidden><svg><use href="#i-share"/></svg></button>
+          <button class="icon-btn" id="temp-btn" aria-label="Turn on temporary chat" data-noop><svg><use href="#i-temp"/></svg></button>
+          <button class="icon-btn mobile-only" id="new-chat-mobile" aria-label="New chat"><svg><use href="#i-new"/></svg></button>
+        </div>
+      </header>
+
+      <div class="body" id="body">
+        <div class="thread" id="thread">
+          <div class="empty" id="empty">
+            <h1 id="headline">What can I help with?</h1>
+          </div>
+          <div class="messages" id="messages"></div>
+        </div>
+
+        <div class="composer-wrap">
+          <form class="composer" id="composer" autocomplete="off">
+            <button type="button" class="c-btn c-plus" aria-label="Add files and more" data-noop><svg><use href="#i-plus"/></svg></button>
+            <div class="c-input">
+              <textarea id="prompt" rows="1" placeholder="Ask anything" aria-label="Message ChatGPT"></textarea>
+            </div>
+            <div class="c-right">
+              <button type="button" class="c-btn c-mic" aria-label="Dictate button" data-noop><svg><use href="#i-mic"/></svg></button>
+              <button type="submit" class="c-send" id="send-btn" aria-label="Start voice mode" data-state="voice">
+                <svg class="s-voice"><use href="#i-voice"/></svg>
+                <svg class="s-send"><use href="#i-send"/></svg>
+                <svg class="s-stop"><use href="#i-stop"/></svg>
+              </button>
+            </div>
+          </form>
+          <p class="disclaimer">ChatGPT can make mistakes. Check important info.</p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
